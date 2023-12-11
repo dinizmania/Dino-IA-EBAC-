@@ -13,7 +13,8 @@ let bestRNA = null;
 function fillDinolist () {
     for (let i=0; i<SAMPLES; i++) {
         dinoList[i] = new RNA(3, [10, 10, 2])
-        dinoLIst[i].load(bestRNA);
+        // aqui vc escreveu dinoLIst mas é dinoList
+        dinoList[i].load(bestRNA);
         if (i > 0) dinoList[i].mutate(0.5)
     }
     console.log('Lista de dinossauros criada!')
@@ -66,7 +67,8 @@ setInterval(() => {
   if(obstacle) {
     const distance = 1 - (utils.getDistance(player, obstacle) / dimensions.WIDTH);
     const speed = player.speed / 6
-    const height = Match.tanh(105 - obstacle.y)
+    // aqui vc escreveu Match.tanh, o correto é Math.tanh
+    const height = Math.tanh(105 - obstacle.y)
     
     const [jump, crouch] = dino.compute([
         distance,
