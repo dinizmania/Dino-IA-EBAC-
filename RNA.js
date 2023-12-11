@@ -1,20 +1,12 @@
-// Função que gera um número aleatório entre 'min' e 'max'
 function randomRange(min, max) {
     return Math.random() * (max - min) + min;
   }
   
-  // Função de interpolação linear
-  // A interpolação linear é uma forma de adivinhar um valor entre dois números que você já conhece. 
-  //Imagine esses dois números como pontos em uma linha. Se você quer encontrar um número entre esses dois pontos, 
-  //a interpolação linear faz isso usando uma fórmula simples. Basicamente, ela "liga os pontos" de forma reta para pegar o valor intermediário. 
-  //É muito útil quando precisamos de valore entre dois números conhecidos.
-  
-  function lerp(a, b, t) {
+ function lerp(a, b, t) {
     // Calcula um valor intermediário entre 'a' e 'b' com base no fator 't'
     return a + (b - a) * t;
   }
   
-  // Vamos criar a definição da classe Neuron (Neurônio)
   class Neuron {
     constructor(inputs) {
   
